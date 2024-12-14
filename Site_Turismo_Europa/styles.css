@@ -31,8 +31,8 @@ ul.menu {
 
 li.nav_link {
     list-style: none;
-     padding: 5px 10px;
-     margin: 0 20px;
+     padding: 5px 0;
+     margin: 0 2%;
      font-size: 20px;      
 }
 
@@ -42,7 +42,7 @@ a.nav_link {
     padding: 5px 10px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 a.nav_link:hover {
@@ -127,15 +127,17 @@ footer {
 
 div.links_rodape {
     width: 100%;
-    text-align: right;
     padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 a.link_footer {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 3vh;
     color: rgb(45, 62, 81);
-    margin: 0 20px;
+   margin-left: 2%;
     padding: 5px 10px;
     border-radius: 15px;
 }
