@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+* {
+    /* Resetar modulos de espaçamentos*/
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: "Arial", sans-serif;
+    color: rgb(45, 62, 81);
+    /* Impede que o conteúdo fora da tela seja visível */
+    overflow-x: hidden;
+    /*estilo para que a rolagem seja suave*/
+    scroll-behavior: smooth;
+
+}
+
+/* ---------------------------- Cabeçalho ---------------------------- */
+
+nav.menu {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px #888888;
+    padding-right: 2%;
+
+}
+
+div#logomarca {
+    height: 80px;
+    background-image: url('imagens/logomarca.png');
+    /* Caminho para a imagem */
+    background-size: contain;
+    /* Ajusta o tamanho da imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    width: 600px;
+    background-color: #888888;
+    margin: 20px 20px;
+
+    transform: translateX(-300px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+
+img#logomarca {
+    margin: 20px 20px;
+    height: 80px;
+    transform: translateX(-300px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+/* Definição da animação */
+@keyframes slideIn {
+    from {
+        transform: translateX(-300px);
+        /* Fora da tela à esquerda */
+    }
+
+    to {
+        transform: translateX(0);
+        /* Posição final */
+    }
+}
+
+ul.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform: translateY(-100px);
+    animation: slideInMenu 1s ease-out forwards;
+}
+
+@keyframes slideInMenu {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+li.nav_link {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0 2%;
+}
+
+a.nav_link {
+    text-decoration: none;
+    color: rgb(45, 62, 81);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 2s;
+}
+
+a.nav_link:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 110, 177);
+    transition: 0.5s;
+}
+
+/* ---------------------------- Main ---------------------------- */
+
+main {
+    margin: 30px 8%;
+    width: 80%;
+    border: 2px solid #888888;
+    box-shadow: 0px 0px 5px 2px #888888;
+    border-radius: 20px;
+    padding: 10px 2%;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    margin: 20px 0 10px 0;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    padding-top: 20px;
+}
+
+p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+ul.lista_ordenadas {
+    margin-left: 30px;
+}
+
+img.fotos {
+    width: 50%;
+    background-color: red;
+    margin: 10px 0;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 2px #888888;
+}
+
+div.fotos {
+    text-align: center;
+    width: 100%;
+}
+
+/* ---------------------------- Rodapé ---------------------------- */
+
+footer {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px #888888;
+    padding: 10px 0;
+}
+
+img#logomarca_rodape {
+    margin: 5px 20px;
+    transform: translateY(300px);
+    animation: slideInFooter 1s ease-out forwards;
+}
+
+div.links_rodape {
+    width: 100%;
+    text-align: right;
+    padding-right: 20px;
+    transform: translateY(300px);
+    animation: slideInFooter 1s ease-out forwards;
+}
+
+a.link_footer {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(45, 62, 81);
+    margin: 5px 10px;
+    padding: 6px 10px;
+    border-radius: 15px;
+}
+
+a.link_footer:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(51, 110, 177);
+    transition: 0.5s;
+}
+
+@keyframes slideInFooter {
+    from {
+        transform: translateY(300px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* ---------------------------- Correção de Tela ---------------------------- */
+
+@media(max-width: 550px) {
+
+    ul.menu {
+        flex-direction: column;
+    }
+
+    img#logomarca {
+        height: 150px;
+    }
+
+    li.nav_link {
+        margin: 2px;
+    }
+
+    a.nav_link {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    li.main_menu_link {
+        font-size: 16px;
+    }
+
+    div.links_rodape {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    a.link_footer {
+        font-size: 20px;
+        margin: 2px;
+    }
+
+    img.fotos {
+        width: 80%;
+    }
+
+    img#logomarca_rodape {
+        height: 150px;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+}
+
+@media (min-width: 551px)  {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
