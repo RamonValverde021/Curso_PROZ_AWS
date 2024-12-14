@@ -51,17 +51,17 @@ ul.menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    transform: translateX(500px);
+    transform: translateY(-100px);
     animation: slideInMenu 1s ease-out forwards;
 }
 
 @keyframes slideInMenu {
     from {
-        transform: translateX(500px);
+        transform: translateY(-100px);
     }
 
     to {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
