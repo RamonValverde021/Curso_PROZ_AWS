@@ -18,8 +18,9 @@ nav.menu {
     align-items: center;
     box-shadow: 0px 0px 5px 2px #888888;
 }
+
 img#logomarca {
-    margin: 10px;
+    margin: 10px 20px 0 10px;
 }
 
 ul.menu {
@@ -31,9 +32,8 @@ ul.menu {
 
 li.nav_link {
     list-style: none;
-     padding: 5px 0;
-     margin: 0 2%;
-     font-size: 20px;      
+    padding: 5px 0;
+    margin: 0 2%;
 }
 
 a.nav_link {
@@ -50,7 +50,7 @@ a.nav_link:hover {
     background-color: rgb(51, 110, 177);
     transition: 0.5s;
 }
- 
+
 /* ---------------------------- Main ---------------------------- */
 
 main {
@@ -90,9 +90,9 @@ ul.main_menu {
 }
 
 li.main_menu_link {
-     padding: 5px;
-     margin: 0 50px;
-     font-size: 20px;      
+    padding: 5px;
+    margin: 0 50px;
+    font-size: 20px;
 }
 
 a.main_menu_link {
@@ -123,21 +123,20 @@ footer {
     display: flex;
     align-items: center;
     box-shadow: 0px 0px 5px 2px #888888;
+    padding: 10px 0;
 }
 
 div.links_rodape {
     width: 100%;
-    padding-right: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    text-align: right;
+    padding-right: 20px;
 }
 
 a.link_footer {
     text-decoration: none;
-    font-size: 3vh;
+    font-size: 20px;
     color: rgb(45, 62, 81);
-   margin-left: 2%;
+    margin: 5px 10px;
     padding: 5px 10px;
     border-radius: 15px;
 }
@@ -147,3 +146,24 @@ a.link_footer:hover {
     background-color: rgb(51, 110, 177);
     transition: 0.5s;
 }
+
+
+@media(max-width: 480px) {
+    a.nav_link {
+        font-size: 15px;
+    }
+
+    div.links_rodape {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+
+    a.link_footer {
+        font-size: 15px;
+    }
+    
+}
+    
